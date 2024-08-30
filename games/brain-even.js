@@ -1,0 +1,18 @@
+import {
+  getRandomInt,
+  runGame,
+} from '/home/alexalex/myProjects/frontend-project-44/scr/index.js';
+
+const description =
+  'Answer "yes" if the number is even, otherwise answer "no".';
+
+const gameLogic = () => {
+  const randomNum = getRandomInt(0, 100);
+  const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
+  return {
+    question: randomNum.toString(),
+    correctAnswer,
+  };
+};
+
+export default () => runGame(gameLogic, description);

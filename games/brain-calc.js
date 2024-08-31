@@ -3,11 +3,6 @@ import {
   runGame,
 } from '/home/alexalex/myProjects/frontend-project-44/scr/index.js';
 
-// const getRandomSymbol = () => {
-//     const symbols = ['+', '-', '*'];
-//     return symbols[getRandomInt(0, symbols.length - 1)];
-//   };
-
 function getRandomSymbol() {
   const mathSymbols = ['+', '-', '*', '/']; // add parametr '/'
   const random = Math.floor(Math.random() * mathSymbols.length);

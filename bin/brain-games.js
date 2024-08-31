@@ -1,5 +1,7 @@
 // import readlineSync from 'readline-sync';
-// import { userGreetings } from '../scr/cli.js';
+import { userGreetings } from '../scr/cli.js';
+
+userGreetings();
 
 // // brain-even-------------
 

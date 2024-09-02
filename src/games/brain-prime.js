@@ -8,7 +8,7 @@ function checkPrime() {
     return { question: number, correctAnswer: 'no' };
   }
 
-  for (let i = 2; i <= Math.sqrt(number); i++) {
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
       isPrime = false;
       break;
@@ -26,7 +26,6 @@ const gameLogic = () => {
   };
 };
 
-const description =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => runGame(gameLogic, description);

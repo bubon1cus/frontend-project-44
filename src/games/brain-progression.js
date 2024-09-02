@@ -14,8 +14,8 @@ function getRandomProgression() {
 }
 
 function getBrokenProgression() {
-  let randomProgression = getRandomProgression();
-  let randomStepRemoved = getRandomInt(0, 4);
+  const randomProgression = getRandomProgression();
+  const randomStepRemoved = getRandomInt(0, 4);
   const correctAnswer = randomProgression[randomStepRemoved];
   randomProgression[randomStepRemoved] = '..';
 

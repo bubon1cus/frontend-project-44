@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
-import { userGreetings } from '../src/cli.js';
+import userGreetings from './cli.js';
 
-const getRandomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const runGame = (gameLogic, description) => {
   const userName = userGreetings();
@@ -19,7 +18,7 @@ const runGame = (gameLogic, description) => {
       correctAnswersCount += 1;
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
       return;

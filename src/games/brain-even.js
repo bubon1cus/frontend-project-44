@@ -1,7 +1,6 @@
 import { getRandomInt, runGame } from '../index.js';
 
-const description =
-  'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameLogic = () => {
   const randomNum = getRandomInt(0, 100);

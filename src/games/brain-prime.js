@@ -1,21 +1,21 @@
 import { getRandomInt, runGame } from '../index.js';
 
 function checkPrime() {
-  let number = getRandomInt(0, 100);
+  const number = getRandomInt(0, 100);
   let isPrime = true;
 
   if (number < 2) {
-    return 'no';
+    return { question: number, correctAnswer: 'no' };
   }
 
-  for (let i = 2; i <= number / 2; i++) {
+  for (let i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
       isPrime = false;
-    } else {
-      isPrime = true;
+      break;
     }
   }
-  return { question: number, correctAnswer: isPrime === true ? 'yes' : 'no' };
+
+  return { question: number, correctAnswer: isPrime ? 'yes' : 'no' };
 }
 
 const gameLogic = () => {

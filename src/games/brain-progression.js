@@ -20,7 +20,7 @@ function getBrokenProgression() {
   randomProgression[randomStepRemoved] = '..';
 
   return {
-    question: randomProgression.join(' '),
+    question: `Question: ${randomProgression.join(' ')}`,
     correctAnswer: correctAnswer.toString(),
   };
 }

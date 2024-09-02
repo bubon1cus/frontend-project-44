@@ -11,7 +11,7 @@ const runGame = (gameLogic, description) => {
   let correctAnswersCount = 0;
   while (correctAnswersCount < 3) {
     const { question, correctAnswer } = gameLogic();
-    console.log(`Question: ${question}`);
+    console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === correctAnswer) {

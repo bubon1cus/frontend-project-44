@@ -21,7 +21,7 @@ function checkPrime() {
 const gameLogic = () => {
   const { question, correctAnswer } = checkPrime();
   return {
-    question: question,
+    question: `Question: &{question}`,
     correctAnswer: correctAnswer.toString(),
   };
 };

@@ -7,7 +7,7 @@ const gameLogic = () => {
   const randomNum = getRandomInt(0, 100);
   const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
   return {
-    question: randomNum.toString(),
+    question: `Question: ${randomNum.toString()}`,
     correctAnswer,
   };
 };

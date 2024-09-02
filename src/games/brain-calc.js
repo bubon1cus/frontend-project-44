@@ -27,7 +27,7 @@ const gameLogic = () => {
   const operator = getRandomSymbol();
   const correctAnswer = calculate(num1, num2, operator).toString();
   return {
-    question: `${num1} ${operator} ${num2}`,
+    question: `Question: ${num1} ${operator} ${num2}`,
     correctAnswer,
   };
 };

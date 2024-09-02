@@ -1,7 +1,4 @@
-import {
-  getRandomInt,
-  runGame,
-} from '/home/alexalex/myProjects/frontend-project-44/scr/index.js';
+import { getRandomInt, runGame } from '../index.js';
 
 function getGcd(num1, num2) {
   while ((num1 != 0) & (num2 != 0)) {

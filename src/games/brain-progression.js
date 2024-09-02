@@ -1,7 +1,4 @@
-import {
-  getRandomInt,
-  runGame,
-} from '/home/alexalex/myProjects/frontend-project-44/scr/index.js';
+import { getRandomInt, runGame } from '../index.js';
 
 function getRandomProgression() {
   const randomProgression = [];

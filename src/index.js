@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { userGreetings } from '../scr/cli.js';
+import { userGreetings } from '../src/cli.js';
 
 const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;

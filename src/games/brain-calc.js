@@ -1,7 +1,7 @@
 import { getRandomInt, runGame } from '../index.js';
 
 function getRandomSymbol() {
-  const mathSymbols = ['+', '-', '*', '/']; // add parametr '/'
+  const mathSymbols = ['+', '-', '*', '/'];
   const random = Math.floor(Math.random() * mathSymbols.length);
   return mathSymbols[random];
 }
@@ -16,6 +16,8 @@ const calculate = (num1, num2, operator) => {
       return num1 * num2;
     case '/':
       return num1 / num2;
+    default:
+      throw new Error('Unknown operator');
   }
 };
 

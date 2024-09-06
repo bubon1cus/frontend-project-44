@@ -1,4 +1,5 @@
-import { getRandomInt, runGame } from '../index.js';
+import { runGame } from '../index.js';
+import { getRandomInt } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 

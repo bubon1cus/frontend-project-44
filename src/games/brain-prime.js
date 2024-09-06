@@ -1,4 +1,5 @@
-import { getRandomInt, runGame } from '../index.js';
+import { runGame } from '../index.js';
+import { getRandomInt } from '../utils.js';
 
 function checkPrime() {
   const number = getRandomInt(0, 100);

@@ -1,5 +1,5 @@
 import { runGame } from '../index.js';
-import { getRandomInt } from '../utils.js';
+import getRandomInt from '../utils.js';
 
 function getGcd(a, b) {
   let num1 = a;

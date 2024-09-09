@@ -20,7 +20,7 @@ const gameLogic = () => {
   const num2 = getRandomInt(1, 100);
   const correctAnswer = getGcd(num1, num2).toString();
   return {
-    question: `Question: ${num1} ${num2}`,
+    question: `${num1} ${num2}`,
     correctAnswer,
   };
 };

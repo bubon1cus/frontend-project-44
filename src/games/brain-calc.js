@@ -2,8 +2,8 @@ import { runGame } from '../index.js';
 import getRandomInt from '../utils.js';
 
 function getRandomSymbol() {
-  const mathSymbols = ['+', '-', '*', '/'];
-  const random = Math.floor(Math.random() * mathSymbols.length);
+  const mathSymbols = ['+', '-', '*'];
+  const random = getRandomInt(0, 2);
   return mathSymbols[random];
 }
 
@@ -15,8 +15,6 @@ const calculate = (num1, num2, operator) => {
       return num1 - num2;
     case '*':
       return num1 * num2;
-    case '/':
-      return num1 / num2;
     default:
       throw new Error('Unknown operator');
   }
@@ -28,7 +26,7 @@ const gameLogic = () => {
   const operator = getRandomSymbol();
   const correctAnswer = calculate(num1, num2, operator).toString();
   return {
-    question: `Question: ${num1} ${operator} ${num2}`,
+    question: `${num1} ${operator} ${num2}`,
     correctAnswer,
   };
 };

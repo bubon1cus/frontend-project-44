@@ -22,7 +22,7 @@ function checkPrime() {
 const gameLogic = () => {
   const { question, correctAnswer } = checkPrime();
   return {
-    question: `Question: ${question}`,
+    question,
     correctAnswer: correctAnswer.toString(),
   };
 };

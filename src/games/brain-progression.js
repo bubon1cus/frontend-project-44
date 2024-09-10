@@ -1,22 +1,23 @@
 import { runGame } from '../index.js';
 import getRandomInt from '../utils.js';
 
-function getProgression(step, length) {
+function getProgression(start, step, length) {
   const progression = [];
-  let value = step;
+  let currentValue = start;
 
   for (let i = 0; i < length; i += 1) {
-    progression.push(value);
-    value += step;
+    progression.push(currentValue);
+    currentValue += step;
   }
 
   return progression;
 }
 
-const gameLogic = () => {
+const composeGameLogic = () => {
   const progressionLength = 5;
+  const start = getRandomInt(1, 10);
   const step = getRandomInt(1, 10);
-  const progression = getProgression(step, progressionLength);
+  const progression = getProgression(start, step, progressionLength);
 
   const randomIndex = getRandomInt(0, progressionLength - 1);
   const correctAnswer = progression[randomIndex];
@@ -30,4 +31,4 @@ const gameLogic = () => {
 
 const description = 'What number is missing in the progression?';
 
-export default () => runGame(gameLogic, description);
+export default () => runGame(composeGameLogic, description);

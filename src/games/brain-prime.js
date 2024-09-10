@@ -15,15 +15,15 @@ function isPrime(number) {
   return true;
 }
 
-const gameLogic = () => {
+const composeGameLogic = () => {
   const number = getRandomInt(0, 100);
   const isNumberPrime = isPrime(number);
   return {
-    question: number,
+    question: number.toString(),
     correctAnswer: isNumberPrime ? 'yes' : 'no',
   };
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default () => runGame(gameLogic, description);
+export default () => runGame(composeGameLogic, description);

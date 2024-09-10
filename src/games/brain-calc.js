@@ -20,7 +20,7 @@ const calculate = (num1, num2, operator) => {
   }
 };
 
-const gameLogic = () => {
+const composeGameLogic = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(1, 100);
   const operator = getRandomSymbol();
@@ -33,4 +33,4 @@ const gameLogic = () => {
 
 const description = 'What is the result of the expression?';
 
-export default () => runGame(gameLogic, description);
+export default () => runGame(composeGameLogic, description);

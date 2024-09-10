@@ -15,7 +15,7 @@ function getGcd(a, b) {
   return num1 + num2;
 }
 
-const gameLogic = () => {
+const composeGameLogic = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(1, 100);
   const correctAnswer = getGcd(num1, num2).toString();
@@ -27,4 +27,4 @@ const gameLogic = () => {
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-export default () => runGame(gameLogic, description);
+export default () => runGame(composeGameLogic, description);

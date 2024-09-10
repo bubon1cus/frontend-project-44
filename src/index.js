@@ -7,13 +7,13 @@ const userGreetings = () => {
   return userName; // Возвращаем имя пользователя
 };
 
-const runGame = (gameLogic, description) => {
+const runGame = (composeGameLogic, description) => {
   const userName = userGreetings();
   console.log(description);
   const roundsCount = 3;
 
   for (let correctAnswersCount = 0; correctAnswersCount < roundsCount; correctAnswersCount += 1) {
-    const { question, correctAnswer } = gameLogic();
+    const { question, correctAnswer } = composeGameLogic();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 

@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 function getRandomSymbol() {
   const mathSymbols = ['+', '-', '*'];
-  const random = getRandomInt(0, 2);
+  const random = getRandomInt(0, mathSymbols.length - 1);
   return mathSymbols[random];
 }
 

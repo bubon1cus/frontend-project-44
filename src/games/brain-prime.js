@@ -1,29 +1,26 @@
 import { runGame } from '../index.js';
 import getRandomInt from '../utils.js';
 
-function checkPrime() {
-  const number = getRandomInt(0, 100);
-  let isPrime = true;
-
+function isPrime(number) {
   if (number < 2) {
-    return { question: number, correctAnswer: 'no' };
+    return false;
   }
 
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
-      isPrime = false;
-      break;
+      return false;
     }
   }
 
-  return { question: number, correctAnswer: isPrime ? 'yes' : 'no' };
+  return true;
 }
 
 const gameLogic = () => {
-  const { question, correctAnswer } = checkPrime();
+  const number = getRandomInt(0, 100);
+  const isNumberPrime = isPrime(number);
   return {
-    question,
-    correctAnswer: correctAnswer.toString(),
+    question: number,
+    correctAnswer: isNumberPrime ? 'yes' : 'no',
   };
 };
 

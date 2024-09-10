@@ -1,36 +1,30 @@
 import { runGame } from '../index.js';
 import getRandomInt from '../utils.js';
 
-function getRandomProgression() {
-  const randomProgression = [];
-  const randomStep = getRandomInt(1, 10); // Generate a new step each time
-  let step = 0;
+function getProgression(step, length) {
+  const progression = [];
+  let value = step;
 
-  while (randomProgression.length < 5) {
-    step += randomStep;
-    randomProgression.push(step);
+  for (let i = 0; i < length; i += 1) {
+    progression.push(value);
+    value += step;
   }
 
-  return randomProgression;
-}
-
-function getBrokenProgression() {
-  const randomProgression = getRandomProgression();
-  const randomStepRemoved = getRandomInt(0, 4);
-  const correctAnswer = randomProgression[randomStepRemoved];
-  randomProgression[randomStepRemoved] = '..';
-
-  return {
-    question: randomProgression.join(' '),
-    correctAnswer: correctAnswer.toString(),
-  };
+  return progression;
 }
 
 const gameLogic = () => {
-  const { question, correctAnswer } = getBrokenProgression();
+  const progressionLength = 5;
+  const step = getRandomInt(1, 10);
+  const progression = getProgression(step, progressionLength);
+
+  const randomIndex = getRandomInt(0, progressionLength - 1);
+  const correctAnswer = progression[randomIndex];
+  progression[randomIndex] = '..';
+
   return {
-    question,
-    correctAnswer,
+    question: progression.join(' '),
+    correctAnswer: correctAnswer.toString(),
   };
 };
 
